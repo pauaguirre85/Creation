@@ -1,0 +1,13 @@
+I started to practice using the SIK GUIDE.
+I was very interested in the RGB Led because it can change of color. Many colors in one led.
+
+Working on it, I have it connected, the way it was supposed to be, but it didn't work. I tryed at least 5 times, but 
+nothing.
+
+I got in contact with Marc Nicholas De Pape and I told him about this. Thanks to him, we discovered that actually I 
+didn't have the Common Anode RGB led, instead I got the Common Cathode RGB. This means that it wasn't working because 
+I have connected the wrong way, I connected it, if it were the Anode. We change the order of the connections and it 
+finally worked.
+
+With this I discovered that there are 2 types of RGB leds, and that I have to know with which one I'm working with, 
+because on this dependes if I can make it work.
