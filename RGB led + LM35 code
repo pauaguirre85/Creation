@@ -98,3 +98,9 @@ void loop ()					  //loop below process
           delay(1000);	// delay for 1 second
 */
 }			
+
+
+This code was made with the help of:
+- http://shin-ajaran.blogspot.ca
+- Colombian electronic engineer Sovio Tereso
+- Marc Nicholas De Pape (DFI)
