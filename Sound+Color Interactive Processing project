@@ -1,0 +1,66 @@
+import ddf.minim.*;
+
+Minim minim;
+AudioPlayer player;
+AudioInput input;
+
+int barWidth = 30;
+int lastBar = -1;
+
+PFont font;
+float scale_factor = 1;
+float table_size = 760;
+
+void setup()
+{
+  //let's make the window a little bigger
+  size(600,600);
+ 
+  minim = new Minim(this);
+  player = minim.loadFile("OscarDleon-QueBuenoBaila Usted.mp3");
+  input = minim.getLineIn();
+  
+  colorMode(HSB, height, height, height);  
+  noStroke();
+  background(0);
+}
+
+void draw(){
+ 
+ if (mousePressed == true)
+ {
+  
+player.play();
+
+ int whichBar = mouseX / barWidth;
+  if (whichBar != lastBar) 
+  {
+     int barX = whichBar * barWidth;
+     fill(mouseY, height, height);
+     ellipse(barX,50, whichBar,whichBar);
+     ellipse(barX, 100, whichBar,50);
+     rect(barX,200, whichBar,whichBar);
+     rect(barX, 300, 200,50);
+     rect(barX,400, whichBar,whichBar);
+     ellipse(barX, 500, whichBar,30);
+     ellipse(barX,600, whichBar,whichBar);
+     lastBar = whichBar; 
+   }
+ }
+  else
+  {
+if (mousePressed == false)
+{
+player.close();
+background (0);
+ font = createFont("Curlz MT", 80);
+scale_factor = height/table_size;
+textFont(font,30*scale_factor);
+text("Let's have some fun!! Click me!", 150,310,540,100);
+
+
+player = minim.loadFile("OscarDleon-QueBuenoBaila Usted.mp3");
+}
+   }
+
+}
