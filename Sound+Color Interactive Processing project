@@ -64,3 +64,7 @@ player = minim.loadFile("OscarDleon-QueBuenoBaila Usted.mp3");
    }
 
 }
+
+//This code was made with the help of:
+- Processing Hue example
+- Processing minim example
